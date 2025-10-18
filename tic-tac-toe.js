@@ -1,4 +1,5 @@
-
+//win patterns from: https://www.geeksforgeeks.org/javascript/simple-tic-tac-toe-game-using-javascript/
+//(bit faster than manually typing it out)
 const winPatterns = [
     [0, 1, 2],
     [0, 3, 6],
