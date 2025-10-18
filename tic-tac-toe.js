@@ -9,7 +9,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     let x = 0
     squares.forEach(div=>{
-        
+        div.addEventListener('mouseover', ()=>{
+            div.classList.add("hover");
+        });
+
+        div.addEventListener('mouseout', ()=>{
+            div.classList.remove("hover");
+        });
+
         div.addEventListener("click", ()=>{
             console.log(x);
             if (!div.textContent){
@@ -26,4 +33,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 
 });
+
     
