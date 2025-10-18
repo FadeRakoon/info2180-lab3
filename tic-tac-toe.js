@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 ))
 
                 if (winner){
-                    console.log("test2")
                     status.classList.add("you-won");
                     status.textContent = `Congratulations! ${symbol} is the Winner!`;
                     return;
@@ -68,14 +67,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
         });
     })
 
-    
-    console.log("test")
+    let button = document.querySelector(".btn")
+    button.addEventListener('click', ()=>{
+        status.classList.remove("you-won");
+        status.textContent = "Move your mouse over a square and click to play an X or an O.";
+        squares.forEach(div=>{
+            div.classList.remove("X");
+            div.classList.remove("O");
+            div.textContent ="";
+        })
+    })
 });
-
-function win (symbol) {
-    return [winPatterns.some(([a,b,c])=>{
-        squares[a].textContent === symbol && squares[b].textContent === symbol && squares[c].textContent === symbol
-    }), symbol]
-
-};
     
